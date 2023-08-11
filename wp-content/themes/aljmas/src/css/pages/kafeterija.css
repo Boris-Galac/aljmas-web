@@ -1,0 +1,10 @@
+@media (min-width: 700px) {
+	.kafeterija-image-inside {
+		height: 40vh;
+		width: 100%;
+		object-position: center;
+	}
+	.kafeterija-2-img {
+		height: 60vh;
+	}
+}

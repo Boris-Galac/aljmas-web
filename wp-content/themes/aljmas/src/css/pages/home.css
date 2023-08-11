@@ -1,0 +1,277 @@
+.hero {
+  background: url("/wp-content/themes/aljmas/src/assets/images/hero-bg.jpg")
+    no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  display: grid;
+}
+@media (min-width: 1200px) {
+  .hero {
+    background-position: center;
+  }
+}
+.hero__headline-msg {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(11px);
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  text-align: center;
+  padding-block: 2rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 54%;
+  left: 50%;
+  width: min(90vw, 900px);
+  padding-inline: 2rem;
+  animation: hero-msg 2.5s forwards;
+  opacity: 0;
+}
+@keyframes hero-msg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.overflow-wrapper {
+  overflow: hidden;
+  flex: 5;
+  position: relative;
+}
+.hero__haadline--animation {
+  animation: hero-headline 3s forwards;
+  transform: translateY(100%);
+}
+@keyframes hero-headline {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+.hero-subheadline-wrapper {
+  overflow: hidden;
+}
+.hero__subhaadline--animation {
+  animation: hero-subheadline 4s forwards;
+}
+@keyframes hero-subheadline {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+.hero__headline-msg .row {
+  flex-direction: row;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .hero__headline-msg .row {
+    flex-direction: row;
+  }
+}
+.logo-wrapper {
+  margin: auto;
+}
+.hero__logo {
+  margin-bottom: 1rem;
+  min-width: 150px;
+  padding-inline: 1rem;
+  display: none;
+}
+@media (min-width: 600px) {
+  .hero__logo {
+    display: block;
+  }
+}
+.hero__haadline {
+  color: var(--white);
+  font-family: Lora;
+  font-size: clamp(2rem, 7vw, 4rem);
+  font-weight: 400;
+  margin-bottom: 1rem;
+  min-width: 10ch;
+}
+.hero p {
+  color: var(--white);
+  font-family: Lora;
+  font-size: 1.1rem;
+}
+.hero-line {
+  height: 1px;
+  margin-block: 2rem;
+  width: min(50vw, 400px);
+  justify-self: center;
+  background-color: var(--white);
+  margin-inline: auto;
+}
+.ornament {
+  margin-top: 2rem;
+  margin-inline: auto;
+  animation: ornament 3s forwards;
+}
+@keyframes ornament {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 38%;
+  }
+}
+/* ZUPNIK */
+.zupnik {
+  background: var(--gradient-zupnik);
+  padding-block: 7vh;
+}
+.zupnik__headline {
+  position: relative;
+}
+.zupnik__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 7vw, 4rem);
+}
+.zupnik__profile-img {
+  margin-inline: auto;
+  min-width: 300px;
+  flex: 1;
+}
+.zupnik__paragraph {
+  flex: 2;
+  place-self: center;
+}
+/* NAJAVE */
+.najave {
+  padding-block: 4rem;
+}
+.najave__headline {
+  margin-bottom: 4rem;
+}
+.najave__headline .h2--heading {
+  text-align: center;
+}
+.najave__headline .h2--heading:after {
+  transform: translateX(-50%);
+  left: 50%;
+}
+.see-more {
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #e8eff6;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  margin-inline: auto;
+}
+.see-more:hover {
+  gap: 10px;
+}
+@media (min-width: 960px) {
+  .najave {
+    padding-block: 6rem;
+  }
+  .zupnik__wrapper {
+    flex-direction: row;
+  }
+}
+/* VIDEO */
+.video {
+  padding-block: 4rem;
+  background: url("/wp-content/themes/aljmas/src/assets/images/video-img.jpg")
+    no-repeat center center/cover;
+}
+/* section video */
+.promo-video {
+  margin-inline: auto;
+}
+.promo-video__wrapper {
+  width: max(80vw, 300px);
+  max-width: 50rem;
+}
+.promo-video__heading + div {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.promo-video__main-video {
+  aspect-ratio: 4/3;
+  width: 100%;
+
+  height: 30vh;
+  margin-bottom: 0.5rem;
+}
+.promo-video__main-video iframe {
+  width: 100%;
+  height: 100%;
+}
+.promo-video__sub-video {
+  position: relative;
+  gap: 0.5rem;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 10rem;
+}
+.promo-video__sub-video iframe {
+  scroll-snap-align: start;
+}
+.promo-video__inner-wrapper {
+  position: relative;
+  height: min-content;
+  overflow: hidden;
+}
+.btns__scrolls-video {
+  top: 0;
+  position: absolute;
+  display: flex;
+  background-color: hsl(33, 100%, 88%);
+  width: 100%;
+  justify-content: space-between;
+}
+.video__left,
+.video__right {
+  top: 0;
+  position: absolute;
+  padding-block: 4rem;
+  padding-inline: 1rem;
+  border-radius: 0;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  transition: 0.2s;
+  z-index: 9;
+}
+.video__left:hover,
+.video__right:hover {
+  background-color: hsla(0, 0%, 100%, 0.7);
+  scale: 1.5;
+}
+.video__left img,
+.video__right img {
+  color: white;
+  height: 22px;
+}
+.video__left {
+  left: 0;
+}
+.video__right {
+  right: 0;
+}
+.video-clip {
+  position: relative;
+}
+.video-clip::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-color: hsla(0, 0%, 0%, 0.3);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.video-clip:hover::after {
+  background-color: hsla(0, 0%, 0%, 0.1);
+}

@@ -1,0 +1,19 @@
+:root {
+  --header-clr: linear-gradient(
+    180deg,
+    #1a2737 68.23%,
+    rgba(67, 78, 92, 0) 100%
+  );
+  --white: #fff;
+  --black: #000;
+  --antracit-clr: hsl(213, 36%, 16%);
+  --paragraph-clr: hsl(203, 14%, 31%);
+  --hero-cta: hsl(198, 70%, 45%);
+  --heading-clr: hsl(203, 16%, 22%);
+  --gradient-zupnik: linear-gradient(
+    101deg,
+    rgb(201, 220, 239),
+    hsla(0, 0%, 100%, 0)
+  );
+  --seemore-clr: hsl(209, 62%, 47%);
+}

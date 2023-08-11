@@ -1,0 +1,12 @@
+.prigodno__img {
+	/* width: 100%; */
+	width: min(100%, 31rem);
+}
+@media (min-width: 900px) {
+	.prigodno__img {
+		/* height: 51vh; */
+		float: left;
+		margin-right: 2rem;
+		margin-bottom: 1rem;
+	}
+}

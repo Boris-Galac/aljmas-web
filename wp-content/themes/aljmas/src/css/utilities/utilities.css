@@ -1,0 +1,95 @@
+.d-flex {
+  display: flex;
+}
+.d-grid {
+  display: grid;
+}
+.text-center {
+  text-align: center;
+}
+.row {
+  display: flex;
+}
+.col {
+  display: grid;
+}
+.container {
+  width: min(100% - 32px, 1024px);
+  margin-inline: auto;
+}
+.mb-64 {
+  margin-bottom: 4rem;
+}
+.mb-48 {
+  margin-bottom: 3rem;
+}
+.mb-32 {
+  margin-bottom: 2rem;
+}
+.mb-24 {
+  margin-bottom: 1.5rem;
+}
+.mb-16 {
+  margin-bottom: 1rem;
+}
+.mb-8 {
+  margin-bottom: 0.5rem;
+}
+.gap-64 {
+  display: grid;
+  gap: 4rem;
+}
+.hidden-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.hidden-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.hidden-down {
+  transform: translateY(30%);
+  opacity: 0;
+}
+.left {
+  animation: left 1.5s forwards;
+}
+@keyframes left {
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+.right {
+  animation: right 1.5s forwards;
+}
+@keyframes right {
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+.down {
+  animation: down 1.5s forwards;
+}
+@keyframes down {
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.pt-section {
+  padding-top: 20vh;
+}
+@media (min-width: 600px) {
+  .pt-section {
+    padding-top: 15vh;
+  }
+}
+.link {
+  color: rgb(0, 123, 231);
+}
+.active {
+  pointer-events: visible;
+  opacity: 1;
+}

@@ -1,0 +1,183 @@
+html,
+body {
+	line-height: 1.4;
+	font-size: 100%;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1,
+h2,
+h3 {
+	line-height: 1.3;
+	letter-spacing: 1px;
+}
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+p {
+	color: var(--paragraph-clr);
+	font-family: 'Poppins', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 190%;
+}
+.događaj__paragraph {
+	line-height: 200%;
+}
+.nav__list {
+	display: grid;
+	gap: 6vh;
+	margin-top: 3rem;
+}
+.nav__link {
+	position: relative;
+	font-family: 'Lora', serif;
+	font-size: 20px;
+	font-weight: 500;
+}
+.nav__link::after {
+	content: '';
+	transition: 0.2s;
+	position: absolute;
+	display: block;
+	left: 0;
+	bottom: -3px;
+	height: 1px;
+	background-color: var(--white);
+	transform-origin: center;
+	width: 100%;
+	transform: scaleX(0);
+}
+.nav__link:hover::after {
+	transform: scaleX(1);
+}
+.h2--heading {
+	position: relative;
+	color: var(--heading-clr);
+	font-family: 'Lora';
+	font-size: clamp(1.5rem, 7vw, 3rem);
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin-bottom: 2rem;
+}
+.h2--heading::after {
+	content: '';
+	position: absolute;
+	height: 1px;
+	left: 0;
+	bottom: -10px;
+	background: var(--black);
+	width: 30%;
+	display: block;
+}
+.subheading {
+	color: var(--heading-clr);
+	font-family: Poppins;
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+.zupnik__subheading {
+	color: var(--heading-clr);
+	text-align: right;
+	font-family: Lora;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+.zupnik__heading {
+	text-align: right;
+}
+.zupnik__heading::after {
+	right: 0;
+	left: unset;
+}
+.zupnik__paragraph {
+	line-height: 250%;
+}
+/* VIDEO */
+.video__headline .h2--heading {
+	color: var(--white);
+}
+.video__headline .h2--heading::after {
+	left: 0;
+	width: 10%;
+	background-color: var(--white);
+}
+/* POVIJEST PAGE */
+.povijest__heading {
+	margin-bottom: 2rem;
+}
+.povijest__heading::after {
+	left: 0;
+}
+.timeline__paragraph {
+	color: var(--paragraph, #44525b);
+	font-family: Lora;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 150%; /* 24px */
+}
+.year-heading {
+	position: relative;
+	color: #2b3d58;
+	font-family: Lora;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+.year-heading::after {
+	content: '';
+	display: block;
+	position: absolute;
+	height: 2px;
+	width: 2rem;
+	background-color: #2b3d58;
+}
+.timeline:nth-child(even) .year-heading::after {
+	right: 0;
+}
+.znacajno__heading {
+	margin-top: 4rem;
+	margin-bottom: 3rem;
+}
+.povijest__znacajno {
+	margin-bottom: 4rem;
+}
+.prigodno__subheading {
+	color: var(--heading-clr);
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+/* GOSPA */
+/* SUVENIRNICA */
+/* MEMROIJALNI */
+.memorijalni__body-wrapper p {
+	width: min(100vw, 600px);
+}
+/* DOGAĐAJI */
+.događaji__heading {
+	position: relative;
+	color: #2e3940;
+	font-family: Lora;
+	font-size: clamp(24px, 7vw, 48px);
+	font-weight: 500;
+	margin-left: 2rem;
+}
+.događaji__heading::before {
+	content: '';
+	position: absolute;
+	background-color: #2e3940;
+	width: 2rem;
+	height: 2px;
+	left: -2.5rem;
+	top: 50%;
+}
+/* KALVARIJA */
+/* KAFETERIJA */

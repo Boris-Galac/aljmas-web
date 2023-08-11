@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+img,
+picture,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+span {
+  display: inline-block;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  color: var(--white);
+}
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(118, 177, 236);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(147, 166, 189);
+}
+
+/* CLASSES */
+
+.main {
+  position: relative;
+  isolation: isolate;
+}
+.main::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/wp-content/themes/aljmas/src/assets/images/overlay-img.png")
+    no-repeat center center/cover;
+  z-index: -1;
+}

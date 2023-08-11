@@ -1,0 +1,17 @@
+.događaj {
+}
+.događaj__header-wrapper {
+}
+.događaj__body-wrapper {
+}
+.događaj__header-wrapper img {
+	object-position: 50% -1%;
+	height: 52vh;
+	width: 100%;
+}
+.događaj__heading {
+	color: var(--heading-clr);
+	font-family: Lora;
+	font-size: clamp(24px, 7vw, 64px);
+	font-weight: 500;
+}

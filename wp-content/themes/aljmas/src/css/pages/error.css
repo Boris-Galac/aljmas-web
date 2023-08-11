@@ -1,0 +1,10 @@
+.error-page {
+}
+.error__wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.error-page .h2--heading::after {
+  background-color: transparent;
+}

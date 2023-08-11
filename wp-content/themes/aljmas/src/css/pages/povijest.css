@@ -1,0 +1,18 @@
+.povijest {
+}
+.povijest__header-wrapper {
+}
+.povijest__body-wrapper {
+  display: grid;
+  gap: 4rem;
+}
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+.povijest__img {
+  margin-bottom: 5rem;
+}
+.timeline:nth-child(even) {
+  text-align: right;
+}

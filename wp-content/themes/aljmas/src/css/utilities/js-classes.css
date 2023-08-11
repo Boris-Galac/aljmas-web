@@ -1,0 +1,32 @@
+/* overlay */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+.overlay[aria-hidden="false"] {
+  pointer-events: visible;
+  opacity: 1;
+  animation: overlay-open 0.5s forwards ease-in-out;
+}
+@keyframes overlay-open {
+  from {
+    background-color: hsla(0, 0%, 0%, 0);
+  }
+  to {
+    background-color: hsla(0, 0%, 0%, 0.6);
+  }
+}
+
+.overlay[aria-hidden="true"] {
+  pointer-events: none;
+  opacity: 0;
+  animation: overlay-close 0.5s forwards ease-in-out;
+}
+@keyframes overlay-close {
+  to {
+    background-color: hsla(0, 0%, 0%, 0);
+  }
+}
