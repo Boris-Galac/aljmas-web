@@ -95,32 +95,6 @@
     transform: translateX(0);
   }
 }
-.gallery-btn {
-  border-radius: 50%;
-  aspect-ratio: 1;
-  background-color: var(--black);
-  color: #fff;
-  width: 3rem;
-  position: absolute;
-  transition: 0.3s;
-  border: 2px solid rgb(208, 208, 208);
-}
-.gallery-btn:hover {
-  background-color: hsl(0, 0%, 27%);
-}
-.gallery-btn i {
-  pointer-events: none;
-}
-.gallery-btn--prev {
-  left: 1rem;
-  transform: translateY(-50%);
-  top: 50%;
-}
-.gallery-btn--next {
-  right: 1rem;
-  transform: translateY(-50%);
-  top: 50%;
-}
 
 @media (min-width: 1024px) {
   .img3 {
