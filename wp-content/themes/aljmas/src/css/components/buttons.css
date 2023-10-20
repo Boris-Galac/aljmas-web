@@ -196,3 +196,17 @@ button {
   opacity: 1;
   pointer-events: visible;
 }
+.galerija__tab-btn {
+  position: relative;
+  transition: 0.3s;
+  padding: 1rem;
+  background-color: hsl(210, 7%, 95%);
+  display: flex;
+  gap: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.161);
+  align-items: center;
+}
+.galerija__tab-btn:hover {
+  background-color: hsl(210, 7%, 92%);
+}

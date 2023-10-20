@@ -4,6 +4,7 @@
 function theme_source_files(){
     wp_enqueue_style('main-css', get_theme_file_uri('src/css/style.css'));
     wp_enqueue_script('main-js', get_theme_file_uri('src/js/main.js'), array(), false, true);
+    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
 }
 
 add_action('wp_enqueue_scripts', 'theme_source_files');
