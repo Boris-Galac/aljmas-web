@@ -200,6 +200,36 @@
                     <img src="/wp-content/themes/aljmas/src/assets/images/album/img (184).jpg" alt="image" class="galerija__image">
                 </div>
             </div>
+            <div class="galerija__tab">
+                <button class="galerija__tab-btn mb-32">
+                <img class="gallery-icon" src="/wp-content/themes/aljmas/src/assets/icons/gallery-icon.svg" aria-hidden="true">
+                  <span class="galerija__tab-span">Album:</span>'Aljmaš iz ptičje perspektive' <img class="close-tab-icon" src="/wp-content/themes/aljmas/src/assets/icons/close-tab-icon.svg" aria-hidden="true">
+                </button>
+                <div class="galerija__tab-content" data-visible="false">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (185).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (186).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (187).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (188).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (189).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (190).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (191).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (192).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (193).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (194).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (195).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (196).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (197).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (198).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (199).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (200).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (201).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (202).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (203).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (204).jpg" alt="image" class="galerija__image">
+                    <img src="/wp-content/themes/aljmas/src/assets/images/album/img (205).jpg" alt="image" class="galerija__image">
+                    
+                </div>
+            </div>
         </div>
         </div>
     </div>
