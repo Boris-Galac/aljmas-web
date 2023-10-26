@@ -39,9 +39,6 @@
                     <a href="<?php echo site_url('povijest-svetista') ?>" class="nav__link">Povijest svetišta</a>
                 </li>
                 <li class="nav__item">
-                    <a href="<?php echo site_url('galerija') ?>" class="nav__link">Galerija</a>
-                </li>
-                <li class="nav__item">
                     <a href="<?php echo site_url('prigodno') ?>" class="nav__link">Prigodno</a>
                 </li>
                 <li class="nav__item">
@@ -58,6 +55,9 @@
                 </li>
                 <li class="nav__item">
                     <a href="<?php echo site_url('suvenirnica') ?>" class="nav__link">Suvenirnica</a>
+                </li>
+                <li class="nav__item">
+                    <a href="<?php echo site_url('galerija') ?>" class="nav__link">Galerija</a>
                 </li>
             </ul>
         </nav>

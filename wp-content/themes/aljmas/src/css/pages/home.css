@@ -275,3 +275,26 @@
 .video-clip:hover::after {
   background-color: hsla(0, 0%, 0%, 0.1);
 }
+/* GALERIJA */
+.galerija-section {
+  position: relative;
+  isolation: isolate;
+  padding-block: 6rem;
+}
+.galerija-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/wp-content/themes/aljmas/src/assets/images/gallery-overlay-img.jpg");
+  z-index: -1;
+}
+.galerija-section__wrapper {
+  display: grid;
+  place-items: center;
+}
+.galerija-section__headline {
+}
+.galerija-section__content {
+}
+.galerija-section__paragraph {
+}

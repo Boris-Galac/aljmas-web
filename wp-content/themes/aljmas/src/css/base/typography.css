@@ -182,3 +182,15 @@ p {
 /* KALVARIJA */
 /* KAFETERIJA */
 /* GALERIJA */
+.galerija-section__headline .h2--heading,
+.galerija-section__paragraph {
+  color: var(--white);
+  text-align: center;
+}
+.galerija-section__headline .h2--heading::after {
+  background-color: var(--white);
+  transform: translateX(-50%);
+  left: 50%;
+}
+.galerija-section__paragraph {
+}

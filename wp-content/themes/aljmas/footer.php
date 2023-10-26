@@ -41,6 +41,9 @@
           <li class="footer__item">
             <a class="footer__link" href="<?php echo site_url('suvenirnica') ?>">Suvenirnica</a>
           </li>
+          <li class="footer__item">
+            <a class="footer__link" href="<?php echo site_url('galerija') ?>">Galerija</a>
+          </li>
         </ul>
         <ul class="footer__list footer--last-row">
           <li class="footer__item ">

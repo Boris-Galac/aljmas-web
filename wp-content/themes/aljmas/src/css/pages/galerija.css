@@ -1,5 +1,15 @@
 .galerija {
 }
+.galerija::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/wp-content/themes/aljmas/src/assets/images/gallery-page-overlay.jpg")
+    no-repeat center center/cover;
+  z-index: -1;
+  opacity: 0.1;
+  background-attachment: fixed;
+}
 .galerija__header-wrapper {
   display: flex;
   gap: 2rem;
