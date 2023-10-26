@@ -21,13 +21,16 @@
             >
           </li>
           <li class="footer__item">
+            <a class="footer__link" href="<?php echo site_url('mise-i-hodocasca') ?>">Mise i hodočašća</a>
+          </li>
+          <li class="footer__item">
             <a class="footer__link" href="<?php echo site_url('povijest-svetista') ?>">Povijest svetišta</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="<?php echo site_url('memorijalni-centar') ?>">Memorijalni centar</a>
+            <a class="footer__link" href="<?php echo site_url('prigodno') ?>">Prigodno</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="<?php echo site_url('prigodno') ?>">Prigodno</a>
+            <a class="footer__link" href="<?php echo site_url('memorijalni-centar') ?>">Memorijalni centar</a>
           </li>
           <li class="footer__item">
             <a class="footer__link" href="<?php echo site_url('gospa-pod-lipom') ?>">Gospa pod Lipom</a>
