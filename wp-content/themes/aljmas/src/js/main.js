@@ -104,131 +104,177 @@ window.addEventListener("scroll", (e) => {
   } else backToTopbtn.setAttribute("data-visible", "false");
 });
 
+////////////////////// 💡 ALBUM GALLERY
+
+let currentImageIndex = 0;
+let currentTabId;
+let newImgWindow;
+
 // gallery tabs
 
 const tabBtns = document.querySelectorAll(".galerija__tab-btn");
+
 tabBtns.forEach((tabBtn) => {
   tabBtn.addEventListener("click", (e) => {
-    const tabContent = tabBtn.nextElementSibling;
     const tabIcon = tabBtn.querySelector(".close-tab-icon");
-    if (tabContent.getAttribute("data-visible") === "false") {
-      tabContent.setAttribute("data-visible", "true");
-      tabIcon.style = `
-      transition:.5s;
-        transform: rotate(45deg);
-      `;
-    } else {
-      tabContent.setAttribute("data-visible", "false");
-      tabIcon.style = `
-      transition:.5s;
-      transform: rotate(0deg);
-    `;
-    }
+    // Toggle the clicked button
+    const isActive = tabBtn.getAttribute("data-active") === "true";
+
+    tabBtns.forEach((btn) => {
+      btn.setAttribute("data-active", "false");
+      const icon = btn.querySelector(".close-tab-icon");
+      icon.style.transition = ".5s";
+      icon.style.transform = "rotate(0deg)";
+    });
+    tabBtn.setAttribute("data-active", isActive ? "false" : "true");
+
+    // Toggle the rotation
+    const rotationAngle = isActive ? "0deg" : "45deg";
+    tabIcon.style.transition = ".5s";
+    tabIcon.style.transform = `rotate(${rotationAngle})`;
+
+    ///////////// 👌
+    // galleryTabBtns.forEach((btn) => {
+    // btn.addEventListener("click", (e) => {
+    currentTabId = e.currentTarget.id;
+    const filteredImgs = tabImages.filter((obj) => obj.id === currentTabId);
+    const imgs = filteredImgs[0].images.map((img) => {
+      const imgElement = document.createElement("img");
+      imgElement.classList.add("galerija__image");
+      imgElement.setAttribute("loading", "lazy");
+      imgElement.setAttribute(
+        "src",
+        `/wp-content/themes/aljmas/src/assets/images/album/img (${img}).jpg`
+      );
+      imgElement.setAttribute("alt", "image");
+
+      return imgElement;
+    });
+
+    const galleryWrapper = document.querySelector(".galerija__tab-content");
+    galleryWrapper.innerHTML = "";
+    imgs.forEach((img) => {
+      img.addEventListener("click", (e) => {
+        const splitPart = img.src.split(
+          "/wp-content/themes/aljmas/src/assets/images/album/img%20("
+        );
+        const otherPart = splitPart[1].replace(").jpg", "");
+        displayImage(otherPart);
+      });
+      galleryWrapper.setAttribute("data-visible", isActive ? "false" : "true");
+      galleryWrapper.appendChild(img);
+    });
   });
 });
 
-// gallery
+// function createOverlay() {
+//   newImgWindow = document.createElement("div");
+//   newImgWindow.setAttribute("class", "overlay-gallery-image");
 
-let galleryImages = document.querySelectorAll(".galerija__image");
-let getLatestOpenedImg;
-let windowWidth = window.innerWidth;
+//   newImgWindow.addEventListener("click", (e) => {
+//     if (e.target === e.currentTarget) {
+//       e.currentTarget.remove();
+//     }
+//   });
+//   document.body.append(newImgWindow);
+// }
 
-let newImgWindow;
+function removeImageClasses() {
+  const currentImg = document.querySelector(".current-gallery-img");
+  if (currentImg) {
+    currentImg.classList.remove("right-image", "left-image");
+  }
+}
 
-if (galleryImages) {
-  galleryImages.forEach((img, index) => {
-    img.addEventListener("click", (e) => {
-      let getFullImageUrl = img.getAttribute("src");
-      let getImageUrlPosition = getFullImageUrl.split(
-        "/wp-content/themes/aljmas/src/assets/images/album/img ("
-      );
-      let setNewImgUrl = getImageUrlPosition[1].replace(").jpg", "");
-      getLatestOpenedImg = index + 1;
-      createOverlay();
-      ///////// create curr img that contains clicked img
-      let newImg = document.createElement("img");
-      newImg.setAttribute("class", "current-gallery-img");
-      newImg.setAttribute("id", "current-img");
-      newImg.setAttribute(
-        "src",
-        `/wp-content/themes/aljmas/src/assets/images/album/img (${setNewImgUrl}).jpg`
-      );
-      newImgWindow.append(newImg);
-      console.log(newImg);
-      // when image is loaded put btns beside
-      newImg.addEventListener("load", () => {
-        createGalleryBtns();
-      });
+function createButtons() {
+  if (!document.querySelector(".gallery-btn--prev")) {
+    const prevBtn = document.createElement("button");
+    prevBtn.setAttribute("class", "gallery-btn gallery-btn--prev");
+    prevBtn.addEventListener("click", () => {
+      changeImg("prev");
     });
+    const prevImgIcon = document.createElement("i");
+    prevImgIcon.setAttribute("class", "fa-solid fa-chevron-left");
+    prevBtn.append(prevImgIcon);
+    newImgWindow.append(prevBtn);
+  }
+
+  if (!document.querySelector(".gallery-btn--next")) {
+    const nextBtn = document.createElement("button");
+    nextBtn.setAttribute("class", "gallery-btn gallery-btn--next ");
+    nextBtn.addEventListener("click", (e) => {
+      changeImg("next");
+    });
+    const nextImgIcon = document.createElement("i");
+    nextImgIcon.setAttribute("class", "fa-solid fa-chevron-right");
+    nextBtn.append(nextImgIcon);
+    newImgWindow.append(nextBtn);
+  }
+}
+
+function createImageOverlay(element) {
+  const existingOverlay = document.querySelector(".overlay-image");
+  if (existingOverlay) {
+    existingOverlay.innerHTML = "";
+    existingOverlay.append(element);
+    existingOverlay.setAttribute("data-visible", "true");
+    newImgWindow = existingOverlay; // Update newImgWindow reference
+  } else {
+    newImgWindow = document.createElement("div");
+    newImgWindow.setAttribute("class", "overlay-image");
+    newImgWindow.setAttribute("data-visible", "true");
+    document.body.append(newImgWindow);
+    newImgWindow.append(element);
+  }
+
+  createButtons();
+
+  newImgWindow.addEventListener("click", (e) => {
+    if (e.target.matches(".overlay-image")) {
+      newImgWindow.setAttribute("data-visible", "false");
+      const firstChild = newImgWindow.firstElementChild;
+      if (firstChild) {
+        firstChild.remove();
+      }
+    }
   });
+}
+
+function displayImage(image) {
+  removeImageClasses(); // Add this line
+
+  currentImageIndex = tabImages
+    .find((album) => album.id === currentTabId)
+    .images.indexOf(image);
+
+  const imgElement = document.createElement("img");
+  imgElement.classList.add("current-gallery-img");
+  imgElement.setAttribute(
+    "src",
+    `/wp-content/themes/aljmas/src/assets/images/album/img (${image}).jpg`
+  );
+  createImageOverlay(imgElement);
 }
 
 function changeImg(changeDir) {
-  let anyOfIimages = newImgWindow.querySelectorAll("img");
-  if (anyOfIimages) {
-    anyOfIimages.forEach((img) => {
-      img.remove();
-    });
-  }
-  let newImg = document.createElement("img");
-  newImgWindow.append(newImg);
+  const currentAlbum = tabImages.find((album) => album.id === currentTabId);
+  const totalImages = currentAlbum.images.length;
 
-  newImg.setAttribute("class", "current-gallery-img");
-  let calcNewImg;
-  if (changeDir === 1) {
-    calcNewImg = getLatestOpenedImg + 1;
-    if (calcNewImg > galleryImages.length) calcNewImg = 1;
-    newImg.classList.remove("left-image");
-    newImg.classList.add("right-image");
-  } else if (changeDir === 0) {
-    calcNewImg = getLatestOpenedImg - 1;
-    newImg.classList.remove("right-image");
-    newImg.classList.add("left-image");
-    if (calcNewImg < 1) calcNewImg = galleryImages.length;
+  if (changeDir === "prev") {
+    currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+  } else if (changeDir === "next") {
+    currentImageIndex = (currentImageIndex + 1) % totalImages;
   }
 
-  newImg.setAttribute(
-    "src",
-    `/wp-content/themes/aljmas/src/assets/images/album/img (${calcNewImg}).jpg`
-  );
-  newImg.setAttribute("id", "current-gallery-img");
-  getLatestOpenedImg = calcNewImg;
-}
+  removeImageClasses();
 
-function createGalleryBtns(e) {
-  ///////////// create btns
-  // prev btn
-  let prevBtn = document.createElement("button");
-  prevBtn.setAttribute("class", "gallery-btn gallery-btn--prev");
-  prevBtn.addEventListener("click", () => {
-    changeImg(0);
-  });
-  let prevImgIcon = document.createElement("i");
-  prevImgIcon.setAttribute("class", "fa-solid fa-chevron-left");
-  prevBtn.append(prevImgIcon);
-  newImgWindow.append(prevBtn);
-  // next btn
-  let nextBtn = document.createElement("button");
-  nextBtn.setAttribute("class", "gallery-btn gallery-btn--next");
-  nextBtn.addEventListener("click", () => {
-    changeImg(1);
-  });
-  let nextImgIcon = document.createElement("i");
-  nextImgIcon.setAttribute("class", "fa-solid fa-chevron-right");
-  nextBtn.append(nextImgIcon);
-  newImgWindow.append(nextBtn);
-}
+  const newImage = currentAlbum.images[currentImageIndex];
+  displayImage(newImage);
 
-function createOverlay() {
-  ////////// create overlay for curr img
-  newImgWindow = document.createElement("div");
-  newImgWindow.setAttribute("class", "overlay-gallery-image");
-
-  ////////// when clicks overlay close img
-  newImgWindow.addEventListener("click", (e) => {
-    if (e.target === e.currentTarget) {
-      e.currentTarget.remove();
-    }
-  });
-  document.body.append(newImgWindow);
+  const currentImg = document.querySelector(".current-gallery-img");
+  if (changeDir === "prev") {
+    currentImg.classList.add("left-image");
+  } else if (changeDir === "next") {
+    currentImg.classList.add("right-image");
+  }
 }
