@@ -17,6 +17,9 @@
   width: min(100% - 32px, 1024px);
   margin-inline: auto;
 }
+.mb-90 {
+  padding-bottom: 150px;
+}
 .mb-64 {
   margin-bottom: 4rem;
 }
