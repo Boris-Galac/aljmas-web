@@ -27,14 +27,14 @@
                         <button class="galerija__tab-btn" data-active="false" id="album-3">
                             <img class="gallery-icon" src="/wp-content/themes/aljmas/src/assets/icons/gallery-icon.svg"
                                 aria-hidden="true">
-                            <span class="galerija__tab-span">Album:</span>'Nuncij Giorgio Lingua u Aljmašu 2023.' <img
+                            <span class="galerija__tab-span">Album:</span>'Velika Gospa u Aljmašu' <img
                                 class="close-tab-icon"
                                 src="/wp-content/themes/aljmas/src/assets/icons/close-tab-icon.svg" aria-hidden="true">
                         </button>
                         <button class="galerija__tab-btn" data-active="false" id="album-4">
                             <img class="gallery-icon" src="/wp-content/themes/aljmas/src/assets/icons/gallery-icon.svg"
                                 aria-hidden="true">
-                            <span class="galerija__tab-span">Album:</span>'Velika Gospa u Aljmašu' <img
+                            <span class="galerija__tab-span">Album:</span>'Nuncij Giorgio Lingua u Aljmašu 2023.' <img
                                 class="close-tab-icon"
                                 src="/wp-content/themes/aljmas/src/assets/icons/close-tab-icon.svg" aria-hidden="true">
                         </button>
