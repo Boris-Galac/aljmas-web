@@ -25,34 +25,41 @@ hamBtn.addEventListener("click", (e) => {
 ////////// FUNCTIONAL VIDEO CAROUSEL
 
 if (document.body.classList.contains("home")) {
-  const left = document.querySelector(".video__left");
-  const right = document.querySelector(".video__right");
   const scrollContainer = document.querySelector(".promo-video__sub-video");
 
   const videoClips = document.querySelectorAll(".video-clip");
   videoClips.forEach((video) => {
     video.addEventListener("click", (e) => {
-      let singleURL = e.target.firstElementChild.src;
+      let singleURL = e.target.getAttribute("data-link");
       e.target.closest(
         ".promo-video__inner-wrapper"
       ).previousElementSibling.firstElementChild.src = singleURL;
     });
   });
 
-  right.addEventListener("click", (e) => {
-    scrollContainer.scrollBy({
-      top: 0,
-      left: 307,
-      behavior: "smooth",
-    });
-  });
-
-  left.addEventListener("click", (e) => {
-    scrollContainer.scrollBy({
-      top: 0,
-      left: -307,
-      behavior: "smooth",
-    });
+  // swiper
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
   });
 }
 

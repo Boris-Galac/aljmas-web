@@ -88,46 +88,41 @@
             </div>
             <div>
                 <div class="promo-video__main-video">
-                <iframe width="644" height="362" src="https://www.youtube.com/embed/jVc6BTkWchU" title="Svetište Aljmaš - Gospa od Utočišta" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="644" height="362" src="https://www.youtube.com/embed/jVc6BTkWchU"
+                        title="Svetište Aljmaš - Gospa od Utočišta" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
                 </div>
-                <div class="promo-video__inner-wrapper">
-                    <div class="promo-video__sub-video
-               d-flex">
-                        <div class="video-clip">
-                        <iframe  src="https://www.youtube.com/embed/jVc6BTkWchU" title="Svetište Aljmaš - Gospa od Utočišta" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-clip">
-                        <iframe src="https://www.youtube.com/embed/xyNuKhL0NhI" title="Svetište Aljmaš - Gospa od Utočišta" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                        <div class="video-clip">
-                            <iframe src="https://www.youtube.com/embed/EsagHKYY4GU" title="Memorijalni Centar Aljmaš"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen></iframe>
-                        </div>
-                        <div class="video-clip">
-                            <iframe src="https://www.youtube.com/embed/PEwhAqP3_oY" title="PRODUŽENI VIKEND 04.08.2023."
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen></iframe>
-                        </div>
-                        <div class="video-clip">
-                            <iframe src="https://www.youtube.com/embed/DALYvqPxdYU"
-                                title="Aljmaš - Svetište Gospe od Utočišta - Snimak iz zraka" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen></iframe>
-                        </div>
-                        <div class="video-clip">
-                            <iframe src="https://www.youtube.com/embed/oTFnWA1Ev1k"
-                                title="✞✞✞ GOSPA OD ALJMAŠA ✞✞✞ &amp; MARTA NIKOLIN" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen></iframe>
-                        </div>
+                <div class="swiper mySwiper promo-video__inner-wrapper">
+                    <div class="swiper-wrapper promo-video__sub-video d-flex
+               ">
+                        <!-- <div  class=" swiper-slide video-clip"> -->
+                        <img data-link="https://www.youtube.com/embed/jVc6BTkWchU" class="swiper-slide video-clip"
+                            src="/wp-content/themes/aljmas/src/assets/images/thumbnails/6.jpg">
+                        <!-- </div> -->
+                        <!-- <div  class=" swiper-slide video-clip"> -->
+                        <img data-link="https://www.youtube.com/embed/xyNuKhL0NhI" class="swiper-slide video-clip"
+                            src="/wp-content/themes/aljmas/src/assets/images/thumbnails/5.jpg">
+                        <!-- </div> -->
+                        <!-- <div  class=" swiper-slide video-clip"> -->
+                        <img data-link="https://www.youtube.com/embed/EsagHKYY4GU" class="swiper-slide video-clip"
+                            src="/wp-content/themes/aljmas/src/assets/images/thumbnails/4.jpg">
+                        <!-- </div> -->
+                        <!-- <div  class=" swiper-slide video-clip"> -->
+                        <img data-link="https://www.youtube.com/embed/PEwhAqP3_oY" class="swiper-slide video-clip"
+                            src="/wp-content/themes/aljmas/src/assets/images/thumbnails/3.jpg">
+                        <!-- </div> -->
+                        <!-- <div  class=" swiper-slide video-clip"> -->
+                        <img data-link="https://www.youtube.com/embed/DALYvqPxdYU" class="swiper-slide video-clip"
+                            src="/wp-content/themes/aljmas/src/assets/images/thumbnails/2.jpg">
+                        <!-- </div> -->
+                        <!-- <div  class=" swiper-slide video-clip"> -->
+                        <img data-link="https://www.youtube.com/embed/oTFnWA1Ev1k" class="swiper-slide video-clip"
+                            src="/wp-content/themes/aljmas/src/assets/images/thumbnails/1.jpg">
+                        <!-- </div> -->
                     </div>
-                    <button class="video__left"><img src="/wp-content/themes/aljmas/src/assets/icons/btn-left.svg"
-                            alt="left"></button>
-                    <button class="video__right"><img src="/wp-content/themes/aljmas/src/assets/icons/btn-right.svg"
-                            alt="right"></button>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
     </section>
@@ -135,18 +130,18 @@
     <section class="galerija-section">
         <div class="container">
             <div class="galerija-section__wrapper">
-            <div class="galerija-section__headline mb-32">
-                <h2 class="h2--heading">Galerija</h2>
-            </div>
-            <div class="galerija-section__content">
-                <p class="galerija-section__paragraph mb-32">
-                Dragi posjetitelji, pogledajte našu bogatu galeriju slika
-                </p>
-                <a href="<?php echo site_url('galerija') ?>" class="see-more">
-            <span>Galerija slika</span>
-            <img src="wp-content/themes/aljmas/src/assets/icons/arrow-right-icon.svg" aria-hidden="true" />
-        </a>
-            </div>
+                <div class="galerija-section__headline mb-32">
+                    <h2 class="h2--heading">Galerija</h2>
+                </div>
+                <div class="galerija-section__content">
+                    <p class="galerija-section__paragraph mb-32">
+                        Dragi posjetitelji, pogledajte našu bogatu galeriju slika
+                    </p>
+                    <a href="<?php echo site_url('galerija') ?>" class="see-more">
+                        <span>Galerija slika</span>
+                        <img src="wp-content/themes/aljmas/src/assets/icons/arrow-right-icon.svg" aria-hidden="true" />
+                    </a>
+                </div>
             </div>
         </div>
     </section>

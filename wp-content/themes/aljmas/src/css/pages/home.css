@@ -191,10 +191,6 @@
 .promo-video {
   margin-inline: auto;
 }
-.promo-video__wrapper {
-  width: max(80vw, 300px);
-  max-width: 50rem;
-}
 .promo-video__heading + div {
   border-radius: 0.5rem;
   overflow: hidden;
@@ -202,7 +198,6 @@
 .promo-video__main-video {
   aspect-ratio: 4/3;
   width: 100%;
-
   height: 30vh;
   margin-bottom: 0.5rem;
 }
@@ -210,15 +205,9 @@
   width: 100%;
   height: 100%;
 }
-.promo-video__sub-video {
-  position: relative;
-  gap: 0.5rem;
-  overflow-x: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-padding: 10rem;
-}
-.promo-video__sub-video iframe {
-  scroll-snap-align: start;
+.promo-video__main-video img {
+  width: 100%;
+  height: 100%;
 }
 .promo-video__inner-wrapper {
   position: relative;
@@ -233,48 +222,17 @@
   width: 100%;
   justify-content: space-between;
 }
-.video__left,
-.video__right {
-  top: 0;
-  position: absolute;
-  padding-block: 4rem;
-  padding-inline: 1rem;
-  border-radius: 0;
-  background-color: hsla(0, 0%, 100%, 0.8);
-  transition: 0.2s;
-  z-index: 9;
-}
-.video__left:hover,
-.video__right:hover {
-  background-color: hsla(0, 0%, 100%, 0.7);
-  scale: 1.5;
-}
-.video__left img,
-.video__right img {
-  color: white;
-  height: 22px;
-}
-.video__left {
-  left: 0;
-}
-.video__right {
-  right: 0;
-}
+
 .video-clip {
   position: relative;
-}
-.video-clip::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  background-color: hsla(0, 0%, 0%, 0.3);
+  height: auto !important;
+  transition: 0.2s;
   cursor: pointer;
-  transition: 0.3s;
 }
-.video-clip:hover::after {
-  background-color: hsla(0, 0%, 0%, 0.1);
+.video-clip:hover {
+  opacity: 0.5;
 }
+
 /* GALERIJA */
 .galerija-section {
   position: relative;
@@ -291,10 +249,4 @@
 .galerija-section__wrapper {
   display: grid;
   place-items: center;
-}
-.galerija-section__headline {
-}
-.galerija-section__content {
-}
-.galerija-section__paragraph {
 }

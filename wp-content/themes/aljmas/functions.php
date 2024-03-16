@@ -4,6 +4,8 @@
 function theme_source_files(){
     wp_enqueue_style('main-css', get_theme_file_uri('src/css/style.css'));
     wp_enqueue_script('galerija-js', get_theme_file_uri('src/js/galerija.js'), array(), false, true);
+    wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+    wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
     wp_enqueue_script('main-js', get_theme_file_uri('src/js/main.js'), array(), false, true);
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
 }
