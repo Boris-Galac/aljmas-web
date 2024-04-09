@@ -96,30 +96,20 @@
                 <div class="swiper mySwiper promo-video__inner-wrapper">
                     <div class="swiper-wrapper promo-video__sub-video d-flex
                ">
-                        <!-- <div  class=" swiper-slide video-clip"> -->
+                        <img data-link="https://www.youtube.com/embed/izpIycS3zlU" class="swiper-slide video-clip"
+                            src="/wp-content/themes/aljmas/src/assets/images/thumbnails/7.jpg">
                         <img data-link="https://www.youtube.com/embed/jVc6BTkWchU" class="swiper-slide video-clip"
                             src="/wp-content/themes/aljmas/src/assets/images/thumbnails/6.jpg">
-                        <!-- </div> -->
-                        <!-- <div  class=" swiper-slide video-clip"> -->
                         <img data-link="https://www.youtube.com/embed/xyNuKhL0NhI" class="swiper-slide video-clip"
                             src="/wp-content/themes/aljmas/src/assets/images/thumbnails/5.jpg">
-                        <!-- </div> -->
-                        <!-- <div  class=" swiper-slide video-clip"> -->
                         <img data-link="https://www.youtube.com/embed/EsagHKYY4GU" class="swiper-slide video-clip"
                             src="/wp-content/themes/aljmas/src/assets/images/thumbnails/4.jpg">
-                        <!-- </div> -->
-                        <!-- <div  class=" swiper-slide video-clip"> -->
                         <img data-link="https://www.youtube.com/embed/PEwhAqP3_oY" class="swiper-slide video-clip"
                             src="/wp-content/themes/aljmas/src/assets/images/thumbnails/3.jpg">
-                        <!-- </div> -->
-                        <!-- <div  class=" swiper-slide video-clip"> -->
                         <img data-link="https://www.youtube.com/embed/DALYvqPxdYU" class="swiper-slide video-clip"
                             src="/wp-content/themes/aljmas/src/assets/images/thumbnails/2.jpg">
-                        <!-- </div> -->
-                        <!-- <div  class=" swiper-slide video-clip"> -->
                         <img data-link="https://www.youtube.com/embed/oTFnWA1Ev1k" class="swiper-slide video-clip"
                             src="/wp-content/themes/aljmas/src/assets/images/thumbnails/1.jpg">
-                        <!-- </div> -->
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
